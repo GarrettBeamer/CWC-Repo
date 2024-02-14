@@ -1,12 +1,13 @@
 ﻿public class PlayerControllerX : MonoBehaviour
 {
     public float speed = 20.0F;
-    private Vector3 velocity = Vector3.up
-    public float verticalInput1;
+    public Vector3 velocity = Vector3.up;
+    private Vector3 offset = new Vector3(0, 5, -7);
+
 
     private float forwardInput;
 
-    private float VerticalInput { get => verticalInput; set => verticalInput = value; }
+    private float VerticalInput { get => VerticalInput; set => VerticalInput = value; }
 
 
     // Start is called before the first frame update
@@ -20,15 +21,15 @@
     {
         // get the user's vertical input
         //Move the plan forward
-        verticalInput = Input.GetAxis("Vertical");
+        VerticalInput = Input.GetAxis("Vertical");
         forwardInput = Input.GetAxis("Horizontal");
 
         // Moves the plan forward on horizontal input
         transform.Translate(Vector3.forward * speed * forwardInput);
 
         // Tilt the plane up/down based on up/down arrow keys input 
-        transform.Rotate(Vector3.up, turnSpeed * verticalInput * Time.deltaTime);
-        if (forwardInput.KeyDown(KeyCode.Up)) transform.position += velocity * Time.delTime;
-        if (forwardInput.KeyDown(Keycode.Down)) transform.position -= velocity * Time.delTime;
+        transform.Rotate(Vector3.up, turnSpeed * VerticalInput * Time.deltaTime);
+        if (forwardInput.KeyDown(KeyCode.Up)) transform.position += Velocity * Time.delTime;
+        if (forwardInput.KeyDown(Keycode.Down)) transform.position -= Velocity * Time.delTime;
     }
 }
