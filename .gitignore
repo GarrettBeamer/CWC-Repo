@@ -7,6 +7,16 @@ Prototypr 1 Truck/[Bb]uilds/
 Prototypr 1 Truck/[Ll]ogs/
 Prototypr 1 Truck/[Uu]ser[Ss]ettings/
 
+Animal Farm/[Ll]ibrary/
+Animal Farm/[Tt]emp/
+Animal Farm/[Oo]bj/
+Animal Farm/[Bb]uild/
+Animal Farm/[Bb]uilds/
+Animal Farm/[Ll]ogs/
+Animal Farm/[Uu]ser[Ss]ettings/
+
+Animal Farm
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
